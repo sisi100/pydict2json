@@ -19,7 +19,7 @@ setuptools.setup(
     package_dir={"": "pydict2json"},
     packages=setuptools.find_packages(where="pydict2json"),
     install_requires=packages,
-    extras_require={"dev": dev_packages[1:], "test": ["pytest"]},
+    extra_requires={"dev": dev_packages[1:], "test": ["pytest"]},
     python_requires=">=3.6",
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
