@@ -1,6 +1,6 @@
 # pydict2json
 
-PythonでDict型をprintした出力をjson形式に整形してクリップボードに入れてくれるCLIアプリ
+PythonでDict型をprintしたときの出力を、json形式に整形してクリップボードに入れてくれるCLIアプリ
 
 
 ## 使用例
