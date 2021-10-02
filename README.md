@@ -22,5 +22,5 @@ $ pydict2json "{'key2': 'def', 'key1': OrderedDict([('hoge1', 123), ('hoge2', 'a
 ## インストール
 
 ```sh
-$ pip install git+https://github.com/sisi100/pydict2json
+$ pip3 install -e .
 ```

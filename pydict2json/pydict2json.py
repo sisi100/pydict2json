@@ -3,7 +3,7 @@ from collections import OrderedDict
 from decimal import Decimal
 
 import pyperclip
-from json_encoder import Encoder
+from .json_encoder import Encoder
 
 
 def clean(text: str):
