@@ -1,6 +1,6 @@
 # pydict2json
 
-PythonでDict型をprintした出力をjson形式に整形してクリップボードに入れてくれるCLIアプリ
+PythonでDict型をprintしたときの出力を、json形式に整形してクリップボードに入れてくれるCLIアプリ
 
 
 ## 使用例
@@ -17,4 +17,10 @@ $ pydict2json "{'key2': 'def', 'key1': OrderedDict([('hoge1', 123), ('hoge2', 'a
     "hoge2": "abc"
   }
 }
+```
+
+## インストール
+
+```sh
+$ pip install git+https://github.com/sisi100/pydict2json
 ```
