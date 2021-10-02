@@ -1,8 +1,23 @@
 import json
 from collections import OrderedDict
+from decimal import Decimal
 
 import pyperclip
 from fire import Fire
+from json_encoder import Encoder
+
+
+def clean(text: str):
+    try:
+        text = eval(text, {"OrderedDict": OrderedDict, "Decimal": Decimal})
+    except:
+        pass
+    return text
+
+
+def text_to_json(text: str):
+    clean_text = clean(text)
+    return json.dumps(clean_text, ensure_ascii=False, indent=2, cls=Encoder)
 
 
 def run(text: str) -> None:
@@ -13,17 +28,11 @@ def run(text: str) -> None:
     text : str
         printで出力された文字列
     """
+    json_text = text_to_json(text)
+    print(json_text)
+    pyperclip.copy(json_text)
 
-    param = dict(ensure_ascii=False, indent=2)
-    try:
-        origine_dict = eval(text, {"OrderedDict": OrderedDict})
-        body = json.dumps(origine_dict, **param)
-    except:
-        body = json.dumps(text, **param)
-
-    print(body)
-    pyperclip.copy(body)
-
+    return True
 
 
 def main():
