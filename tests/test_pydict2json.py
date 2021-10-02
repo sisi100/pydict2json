@@ -6,7 +6,7 @@ from typing import Tuple
 
 import pytest
 
-import pydict2json
+from pydict2json import pydict2json
 
 
 def clear_text(text: str):

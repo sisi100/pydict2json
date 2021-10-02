@@ -3,7 +3,6 @@ from collections import OrderedDict
 from decimal import Decimal
 
 import pyperclip
-from fire import Fire
 from json_encoder import Encoder
 
 
@@ -33,7 +32,3 @@ def run(text: str) -> None:
     pyperclip.copy(json_text)
 
     return True
-
-
-def main():
-    Fire(run)
