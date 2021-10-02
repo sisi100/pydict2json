@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     author="sisii",
     package_dir={"": "pydict2json"},
-    packages=setuptools.find_packages(where="pydict2json"),
+    packages=["pydict2json"],
     install_requires=packages,
     extras_require={"dev": dev_packages[1:], "test": ["pytest"]},
     python_requires=">=3.6",
